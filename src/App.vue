@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-
+    <JokesApi></JokesApi>
+   <!-- <header></header> -->
   </div>
 </template>
 
 <script>
 import JokesApi from './components/JokesApi.vue';
+// import header from './components/header.vue';
 
 export default {
   name: 'app',
   components: {
     JokesApi,
+    // header,
   },
 };
 </script>
