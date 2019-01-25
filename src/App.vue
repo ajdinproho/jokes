@@ -1,19 +1,25 @@
 <template>
   <div id="app">
+    <app-header></app-header>
     <JokesApi></JokesApi>
-   <!-- <header></header> -->
+   <!-- <content></content> -->
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import appheader from './components/header.vue';
 import JokesApi from './components/JokesApi.vue';
-// import header from './components/header.vue';
+// import content from './components/content.vue';
+import appfooter from './components/footer.vue';
 
 export default {
   name: 'app',
   components: {
+    'app-header': appheader,
     JokesApi,
-    // header,
+    // content,
+    'app-footer': appfooter,
   },
 };
 </script>
