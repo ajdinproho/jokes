@@ -1,3 +1,4 @@
 export default {
-
+  SPREMI_KATEGORIJE: 'SPREMI_KATEGORIJE',
+  SPREMI_VIC: 'SPREMI_VIC',
 };
