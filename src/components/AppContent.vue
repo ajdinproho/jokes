@@ -2,8 +2,8 @@
  <div class="back">
     <div class="container" >
     <div class="row">
-      <div v-for="(joke, index) in jokes" :key="index" class="col s12 m3 l3">
-        <Joke :Joke="joke"/>
+      <div v-for="(joke, index) in jokes" :key="index">
+        <app-joke :app-joke="joke"/>
       </div>
     </div>
     </div>
@@ -11,14 +11,13 @@
 </template>
 
 <script>
-
 import { filter } from 'lodash';
-import Joke from './Joke.vue';
+import AppJoke from './AppJoke.vue';
 
 export default {
   name: 'AppContent',
   components: {
-    Joke,
+    AppJoke,
   },
   computed: {
     jokes() {
@@ -32,10 +31,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media only screen and (max-width : 480px) {
-  .row{
+.row{
     margin-top: 80px;
-  }
 }
 .container{
   padding-top: 90px;

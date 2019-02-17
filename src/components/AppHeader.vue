@@ -2,9 +2,8 @@
   <nav class="navigacija">
     <div class="navigacija-wraper">
       <div class="red">
-        <div class="col s12 m2 l2 first">
+        <div>
          <a id="dropdown" class='dropdown-trigger btn' data-target='dropdown1'> CATEGORY
-            <i class="large material-icons">arrow_drop_down</i>
          </a>
          <ul id='dropdown1' class='dropdown-content'>
            <li v-for="(category,index) in categories"
@@ -14,28 +13,25 @@
            </li>
          </ul>
         </div>
-        <div class="col s3 m2 l2">
+        <div>
           <a  v-if="selectedCategory"
              @click="removeCategory()"
              class="waves-effect indigo darken-4 btn"
              id="selectedCat">{{ selectedCategory }}>
-            <i class="large material-icons">clear</i>
+            <i>clear</i>
           </a>
-          <a v-else class="waves-effect indigo darken-4 btn" id="sselectedCat">KATEGORIJE</a>
+          <a v-else class="waves-effect indigo darken-4 btn" id="sselectedCat">CATEGORIES</a>
         </div>
-        <div class="col s3 m2 l2 space"></div>
-        <div class="col s3 m2 l2">
+        <div>
             <a @click="dobaviVic()"
               class="waves-effect indigo darken-4 btn"
               id="crackJoke"> FETCH
-              <i class="large material-icons">add</i>
             </a>
         </div>
-        <div class="col s3 m2 l2">
+        <div>
             <a @click="removeJokes()"
               class="waves-effect indigo darken-4 btn"
               id="crackJoke"> CLEAR ALL
-              <i class="large material-icons">delete</i>
             </a>
         </div>
       </div>
@@ -90,16 +86,10 @@ export default {
       width: 70px;
       height: 25px;
   }
-  .space{
-    display: none;
-  }
 }
 .bar{
   position: fixed;
   z-index: 2;
-}
-.btn{
-  color: #9e9e9e;
 }
 .first{
   height: 64px;

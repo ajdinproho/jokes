@@ -3,11 +3,11 @@
     <div class="card horizontal indigo darken-3">
       <div class="card-stacked">
         <div class="card-content">
-          <p>{{ Joke.value }}</p>
+          <p>{{ AppJoke.value }}</p>
             </div>
             <div class="card-action">
               <a id="button"
-                @click="removeJoke(Joke.id)"
+                @click="removeJoke(AppJoke.id)"
                 class="waves-effect indigo darken-4 btn"> REMOVE JOKE
               </a>
             </div>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'Joke',
+  name: 'AppJoke',
   props: {
     Joke: {
       type: Object,
@@ -26,8 +26,8 @@ export default {
     },
   },
   methods: {
-    removeJoke(jokeID) {
-      this.$store.getters.dispatch('removeJoke', jokeID);
+    removeJoke(jokeId) {
+      this.$store.getters.dispatch('removeJoke', jokeId);
     },
   },
 };
