@@ -1,7 +1,10 @@
 <template>
-  <nav class="navigacija">
-    <div class="navigacija-wraper">
-         <a id="dropdown" class='dropdown-trigger btn' data-target='dropdown1'> CATEGORY
+  <nav class="green darken-3 bar">
+    <div class="nav-wrapper">
+      <div class="row">
+        <div class="col s12 m3">
+          <a id="dropdown" class='dropdown-trigger btn grey darken-4' data-target='dropdown1'>
+             CATEGORY
          </a>
          <ul id='dropdown1' class='dropdown-content'>
            <li v-for="(category,index) in categories"
@@ -10,25 +13,27 @@
              <a class="dropDownTxt" href="#!">{{ category }}</a>
            </li>
          </ul>
-        <div>
+        </div>
+        <div class="col s12 m3">
           <a  v-if="selectedCategory"
              @click="removeCategory()"
              class="waves-effect indigo darken-4 btn"
              id="selectedCat">{{ selectedCategory }}
           </a>
-          <a v-else class="waves-effect indigo darken-4 btn" id="sselectedCat">CATEGORIES</a>
+          <a v-else class="waves-effect grey darken-4 btn" id="selectedCat">CATEGORIES</a>
         </div>
-        <div>
+        <div class="col s12 m3">
             <a @click="fetchJoke()"
-              class="waves-effect indigo darken-4 btn"
+              class="waves-effect grey darken-4 btn"
               id="crackJoke"> FETCH
             </a>
         </div>
         <div>
             <a @click="removeJokes()"
-              class="waves-effect indigo darken-4 btn"
+              class="waves-effect grey darken-4 btn"
               id="crackJoke"> CLEAR ALL
             </a>
+         </div>
         </div>
       </div>
   </nav>
@@ -73,13 +78,13 @@ export default {
 @media only screen and (max-width : 480px) {
   nav {
     position: absolute;
-    height: 160px;
+    height: 200px;
   }
-   a{
+  a{
     align-self: center;
-      font-size: 6px;
-      width: 70px;
-      height: 25px;
+    font-size: 6px;
+    width: 70px;
+    height: 25px;
   }
 }
 .bar{

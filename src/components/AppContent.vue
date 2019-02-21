@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { filter } from 'lodash';
+// import { filter } from 'lodash';
 import AppJoke from './AppJoke.vue';
 
 export default {
@@ -24,7 +24,8 @@ export default {
       if (this.$store.getters.selectedCategory === null) {
         return this.$store.getters.jokes;
       }
-      return _.filter(this.$store.getters.jokes, joke => joke.category === this.$store.getters.selectedCategory);
+      return (this.$store.getters.jokes)
+       && (joke => joke.category === this.$store.getters.selectedCategory);
     },
   },
 };
@@ -32,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .row{
-    margin-top: 80px;
+    margin-top: 35px;
 }
 .container{
   padding-top: 90px;
