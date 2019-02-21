@@ -1,6 +1,5 @@
 <template>
   <div class="row">
-    <div class="col s12 m3 13">
       <div class="card horizontal green darken-4">
       <div class="card-stacked">
         <div class="card-content">
@@ -15,7 +14,6 @@
       </div>
     </div>
   </div>
-    </div>
 </template>
 
 <script>
@@ -36,9 +34,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.row .col .m3 {
-  width: 50px;
-}
 .card-content {
   color: white;
   font-weight: bold;

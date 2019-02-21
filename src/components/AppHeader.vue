@@ -17,7 +17,7 @@
         <div class="col s12 m3">
           <a  v-if="selectedCategory"
              @click="removeCategory()"
-             class="waves-effect indigo darken-4 btn"
+             class="waves-effect black darken-4 btn"
              id="selectedCat">{{ selectedCategory }}
           </a>
           <a v-else class="waves-effect grey darken-4 btn" id="selectedCat">CATEGORIES</a>
@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 500px) {
   nav {
     position: absolute;
     height: 200px;
