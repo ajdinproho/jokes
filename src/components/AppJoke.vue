@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card horizontal indigo darken-3">
+    <div class="card horizontal indigo darken-4">
       <div class="card-stacked">
         <div class="card-content">
           <p>{{ AppJoke.value }}</p>
@@ -20,7 +20,7 @@
 export default {
   name: 'AppJoke',
   props: {
-    Joke: {
+    AppJoke: {
       type: Object,
       required: true,
     },

@@ -5,8 +5,8 @@ import state from './state';
 export default {
   loadCategories({ commit }) {
     axios.get('https://api.chucknorris.io/jokes/categories')
-      .then((Response) => {
-        commit(types.SPREMI_KATEGORIJE, Response.data);
+      .then((response) => {
+        commit(types.SPREMI_KATEGORIJE, response.data);
       });
   },
   saveJoke({ commit }) {

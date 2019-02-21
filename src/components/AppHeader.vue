@@ -1,8 +1,6 @@
 <template>
   <nav class="navigacija">
     <div class="navigacija-wraper">
-      <div class="red">
-        <div>
          <a id="dropdown" class='dropdown-trigger btn' data-target='dropdown1'> CATEGORY
          </a>
          <ul id='dropdown1' class='dropdown-content'>
@@ -12,18 +10,16 @@
              <a class="dropDownTxt" href="#!">{{ category }}</a>
            </li>
          </ul>
-        </div>
         <div>
           <a  v-if="selectedCategory"
              @click="removeCategory()"
              class="waves-effect indigo darken-4 btn"
-             id="selectedCat">{{ selectedCategory }}>
-            <i>clear</i>
+             id="selectedCat">{{ selectedCategory }}
           </a>
           <a v-else class="waves-effect indigo darken-4 btn" id="sselectedCat">CATEGORIES</a>
         </div>
         <div>
-            <a @click="dobaviVic()"
+            <a @click="fetchJoke()"
               class="waves-effect indigo darken-4 btn"
               id="crackJoke"> FETCH
             </a>
@@ -35,7 +31,6 @@
             </a>
         </div>
       </div>
-    </div>
   </nav>
 </template>
 
@@ -61,7 +56,7 @@ export default {
     selectCategory(category) {
       this.$store.dispatch('selectCategory', category);
     },
-    dobaviVic() {
+    fetchJoke() {
       this.$store.dispatch('saveJoke');
     },
     removeCategory() {
