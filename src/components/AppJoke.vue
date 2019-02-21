@@ -36,19 +36,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.row .col .m3{
+.row .col .m3 {
   width: 50px;
 }
-.card-content{
+.card-content {
   color: white;
   font-weight: bold;
 }
-.btn{
+.btn {
   border-radius: 10px;
   font-weight: bold;
   color: white;
 }
-.card-action{
+.card-action {
   border-color: #212121!important;
 }
 </style>

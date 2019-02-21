@@ -80,18 +80,18 @@ export default {
     position: absolute;
     height: 200px;
   }
-  a{
+  a {
     align-self: center;
     font-size: 6px;
     width: 70px;
     height: 25px;
   }
 }
-.bar{
+.bar {
   position: fixed;
   z-index: 2;
 }
-.first{
+.first {
   height: 64px;
 }
 ul {
@@ -111,10 +111,10 @@ li {
 .dropDownText {
   color: #bdbdbd !important;
 }
-.dropDownText:hover{
+.dropDownText:hover {
   color: #212121 !important;
 }
-i{
+i {
   float: right;
   width: 10px;
   height: 36px;

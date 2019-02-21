@@ -32,8 +32,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.row{
-    margin-top: 35px;
+  @media only screen and (max-width : 480px) {
+  .row{
+    margin-top: 80px;
+  }
 }
 .container{
   padding-top: 90px;
