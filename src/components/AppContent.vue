@@ -11,7 +11,7 @@
 </template>
 
 <script>
-// import { filter } from 'lodash';
+import { filter } from 'lodash';
 import AppJoke from './AppJoke.vue';
 
 export default {
@@ -24,8 +24,7 @@ export default {
       if (this.$store.getters.selectedCategory === null) {
         return this.$store.getters.jokes;
       }
-      return (this.$store.getters.jokes)
-       && (joke => joke.category === this.$store.getters.selectedCategory);
+      return _.filter(this.$store.getters.jokes, joke => joke.category == this.$store.getters.selectedCategory);
     },
   },
 };
