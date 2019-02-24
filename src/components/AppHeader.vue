@@ -2,7 +2,7 @@
   <nav class="green darken-3 bar">
     <div class="nav-wrapper">
       <div class="row">
-        <div class="col s12 m3">
+        <div class="col s3 m3">
           <a id="dropdown" class='dropdown-trigger btn grey darken-4' data-target='dropdown1'>
              CATEGORY
          </a>
@@ -14,7 +14,7 @@
            </li>
          </ul>
         </div>
-        <div class="col s12 m3">
+        <div class="col s3 m3">
           <a  v-if="selectedCategory"
              @click="removeCategory()"
              class="waves-effect black darken-4 btn"
@@ -22,7 +22,7 @@
           </a>
           <a v-else class="waves-effect grey darken-4 btn" id="selectedCat">CATEGORIES</a>
         </div>
-        <div class="col s12 m3">
+        <div class="col s3 m3">
             <a @click="fetchJoke()"
               class="waves-effect grey darken-4 btn"
               id="crackJoke"> FETCH
@@ -78,13 +78,16 @@ export default {
 @media only screen and (max-width : 500px) {
   nav {
     position: absolute;
-    height: 200px;
+    height: 100px;
   }
   a {
     align-self: center;
     font-size: 6px;
     width: 70px;
     height: 25px;
+  }
+  .btn {
+    font-size: 7px;
   }
 }
 .bar {
